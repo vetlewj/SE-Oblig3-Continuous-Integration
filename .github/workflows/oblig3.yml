@@ -1,14 +1,13 @@
 name: Python package
 
 on: [push]
+defaults:
+  run:
+    working-directory: Oblig2_Testing
 
 jobs:
-  job1:
-    build:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: Oblig2_Testing
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
