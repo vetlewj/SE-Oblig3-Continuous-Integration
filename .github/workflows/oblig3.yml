@@ -34,9 +34,11 @@ jobs:
           pip install pytest-cov
           pytest tests/
       - name: create workflow data folder
-        run: mkdir -p workflow-data
+        run: |
+          mkdir -p workflow-data
       - name: check workflow data files were created
-        run: echo hello > workflow-data/pytest-results-${{ matrix.python-version}}.txt
+        run: |
+          echo hello > workflow-data/pytest-results-${{ matrix.python-version}}.txt
       - name: Upload test results
         uses: actions/upload-artifact@v2
         with:
