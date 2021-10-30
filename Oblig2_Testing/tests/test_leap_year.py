@@ -1,7 +1,7 @@
-import leap_year_checker
-
-
 # Test Acceptance criteria for leap year
+from Oblig2_Testing import leap_year_checker
+
+
 def test_year_is_leap_year_when_divisible_by_4_not_100():
     assert leap_year_checker.is_leap_year(4)
     assert leap_year_checker.is_leap_year(204)
