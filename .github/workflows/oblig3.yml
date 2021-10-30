@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: pytest-results-${{ matrix.python-version}}
-          path: workflow_data/pytest-results-${{ matrix.python-version}}.txt
+          path: workflow-data/pytest-results-${{ matrix.python-version}}.txt
         if: ${{ always() }}
