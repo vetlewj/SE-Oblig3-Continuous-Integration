@@ -33,3 +33,9 @@ jobs:
           pip install pytest
           pip install pytest-cov
           pytest tests/
+      - name: Upload test results
+        uses: action/upload-artifact@v2
+        with:
+          name: pytest-results-${{ matrix.python-version}}
+          path: workflow_data/pytest-results-${{ matrix.python-version}}.txt
+        if: ${{ always() }}
