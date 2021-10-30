@@ -7,7 +7,7 @@ defaults:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ['3.7', '3.8', '3.9', '3.10']
@@ -33,6 +33,10 @@ jobs:
           pip install pytest
           pip install pytest-cov
           pytest tests/
+      - name: Create artifact files
+        run: |
+          cd workflow_data
+          ${{ matrix.python-version }} > pytest-results-${{ matrix.python-version}}.txt
       - name: Upload test results
         uses: actions/upload-artifact@v2
         with:
