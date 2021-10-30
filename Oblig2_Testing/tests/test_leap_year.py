@@ -43,11 +43,11 @@ def test_year_is_not_leap_year_when_divisible_by_100_not_400():
 """
 Accceptance Criterias
 
-** A year is a leap year: 
+** A year is a leap year:
     - When it is divisible by 4, but not 100
     - When it is divisible by 400
 
-** A year is not a leap year: 
+** A year is not a leap year:
     - When it is not divisible by 4
     - When it is divisible by 100, but not 400
 

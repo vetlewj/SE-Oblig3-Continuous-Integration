@@ -11,4 +11,3 @@ def is_divisible_by(num_to_div, div_by):
     if num_to_div % div_by == 0:
         return True
     return False
-
