@@ -33,6 +33,7 @@ jobs:
           pip install pytest
           pip install pytest-cov
           pytest tests/
+          pytest --cov=tests/
       # - name: create workflow data folder
       #   run: |
       #     mkdir -p workflow-data
